@@ -1,613 +1,1942 @@
-<title>HG Consultoria Empresarial | Contabilidade e Consultoria em Macapá</title>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="HG Consultoria Empresarial - Consultoria Contábil e Empresarial em Macapá, Amapá. Soluções contábeis para empresas, empresários e empreendedores.">
+    <meta name="keywords" content="contabilidade Macapá, contador Macapá, consultoria empresarial, contabilidade Amapá, HG Consultoria Empresarial">
+    <meta name="author" content="HG Consultoria Contábil e Empresarial LTDA">
+
+    <title>HG Consultoria Empresarial | Contabilidade e Consultoria</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --primary: #0b3d62;
+            --primary-dark: #072c47;
+            --secondary: #1596d1;
+            --accent: #20b486;
+            --light: #f5f8fb;
+            --dark: #17202a;
+            --text: #5d6875;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #fff;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(7, 44, 71, 0.97);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: #fff !important;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-brand span {
+            color: #20b486;
+        }
+
+        .navbar .nav-link {
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+            margin-left: 12px;
+            transition: 0.3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: #20b486;
+        }
+
+        .btn-navbar {
+            background: var(--accent);
+            color: #fff !important;
+            border-radius: 8px;
+            padding: 9px 18px !important;
+        }
+
+        .btn-navbar:hover {
+            background: #17956e;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
 
-<meta name="description" content="HG Consultoria Contábil e Empresarial LTDA. Serviços de contabilidade e consultoria empresarial em Macapá, Amapá.">
-<meta name="keywords" content="contabilidade Macapá, contador Macapá, consultoria empresarial, HG Consultoria, contabilidade Amapá">
-<meta name="author" content="HG Consultoria Contábil e Empresarial LTDA">
-
-<!-- Bootstrap 5 -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Bootstrap Icons -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-    :root {
-        --primary: #0b3d5c;
-        --primary-dark: #072b40;
-        --secondary: #16a085;
-        --accent: #20c997;
-        --light: #f5f8fa;
-        --dark: #172b3a;
-        --text: #5f6b76;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        font-family: 'Inter', sans-serif;
-        color: var(--dark);
-        background: #fff;
-    }
-
-    .navbar {
-        transition: all .3s ease;
-    }
-
-    .navbar-brand {
-        font-weight: 800;
-        color: var(--primary) !important;
-        letter-spacing: -0.5px;
-    }
-
-    .navbar-brand span {
-        color: var(--secondary);
-    }
-
-    .nav-link {
-        color: #40515e !important;
-        font-weight: 500;
-        margin: 0 6px;
-    }
-
-    .nav-link:hover {
-        color: var(--secondary) !important;
-    }
-
-    .btn-primary-custom {
-        background: var(--secondary);
-        border: none;
-        color: #fff;
-        font-weight: 700;
-        padding: 13px 25px;
-        border-radius: 8px;
-        transition: .3s;
-    }
-
-    .btn-primary-custom:hover {
-        background: #11856e;
-        color: #fff;
-        transform: translateY(-2px);
-    }
-
-    .btn-outline-custom {
-        border: 2px solid rgba(255,255,255,.8);
-        color: #fff;
-        font-weight: 600;
-        padding: 11px 24px;
-        border-radius: 8px;
-        transition: .3s;
-    }
-
-    .btn-outline-custom:hover {
-        background: #fff;
-        color: var(--primary);
-    }
-
-    /* HERO */
-
-    .hero {
-        min-height: 720px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-        background:
-            linear-gradient(115deg, rgba(5,31,46,.98), rgba(11,61,92,.88)),
-            radial-gradient(circle at top right, #16a085, transparent 40%);
-    }
-
-    .hero::before {
-        content: "";
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        border: 80px solid rgba(32,201,151,.08);
-        border-radius: 50%;
-        right: -180px;
-        top: -150px;
-    }
-
-    .hero::after {
-        content: "";
-        position: absolute;
-        width: 350px;
-        height: 350px;
-        border: 50px solid rgba(255,255,255,.04);
-        border-radius: 50%;
-        left: -180px;
-        bottom: -180px;
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 2;
-    }
-
-    .hero-badge {
-        display: inline-block;
-        background: rgba(32,201,151,.15);
-        border: 1px solid rgba(32,201,151,.35);
-        color: #71f1cc;
-        padding: 8px 15px;
-        border-radius: 50px;
-        font-size: .85rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
-
-    .hero h1 {
-        color: #fff;
-        font-size: clamp(2.5rem, 5vw, 4.4rem);
-        line-height: 1.08;
-        font-weight: 800;
-        letter-spacing: -2px;
-    }
-
-    .hero h1 span {
-        color: #4ee2b8;
-    }
-
-    .hero p {
-        color: rgba(255,255,255,.78);
-        font-size: 1.1rem;
-        line-height: 1.8;
-        max-width: 650px;
-    }
-
-    .hero-info {
-        color: rgba(255,255,255,.75);
-        margin-top: 25px;
-    }
-
-    .hero-info i {
-        color: #4ee2b8;
-        margin-right: 8px;
-    }
-
-    .hero-card {
-        position: relative;
-        z-index: 2;
-        background: rgba(255,255,255,.1);
-        backdrop-filter: blur(15px);
-        border: 1px solid rgba(255,255,255,.15);
-        border-radius: 20px;
-        padding: 35px;
-        color: #fff;
-        box-shadow: 0 25px 70px rgba(0,0,0,.2);
-    }
-
-    .hero-card-icon {
-        width: 65px;
-        height: 65px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--secondary);
-        border-radius: 15px;
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-
-    /* GENERAL */
-
-    section {
-        padding: 100px 0;
-    }
-
-    .section-label {
-        color: var(--secondary);
-        font-size: .85rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 800;
-        margin-bottom: 10px;
-    }
-
-    .section-title {
-        font-size: clamp(2rem, 4vw, 3rem);
-        font-weight: 800;
-        letter-spacing: -1px;
-        color: var(--dark);
-    }
-
-    .section-description {
-        color: var(--text);
-        line-height: 1.8;
-        max-width: 700px;
-    }
-
-    /* SOBRE */
-
-    .about {
-        background: #fff;
-    }
-
-    .about-image {
-        min-height: 480px;
-        background: linear-gradient(135deg, var(--primary), #117b72);
-        border-radius: 25px;
-        position: relative;
-        overflow: hidden;
-        padding: 40px;
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .about-image::before {
-        content: "";
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        border: 60px solid rgba(255,255,255,.08);
-        border-radius: 50%;
-        top: -100px;
-        right: -100px;
-    }
-
-    .about-stat {
-        position: relative;
-        z-index: 2;
-        background: rgba(255,255,255,.1);
-        backdrop-filter: blur(10px);
-        padding: 25px;
-        border-radius: 15px;
-        color: #fff;
-        width: 100%;
-    }
-
-    .about-stat h3 {
-        font-size: 2.2rem;
-        font-weight: 800;
-    }
-
-    .check-list {
-        list-style: none;
-        padding: 0;
-        margin: 30px 0;
-    }
-
-    .check-list li {
-        margin-bottom: 18px;
-        color: var(--text);
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .check-list i {
-        color: var(--secondary);
-        font-size: 20px;
-        margin-right: 12px;
-    }
-
-    /* SERVIÇOS */
-
-    .services {
-        background: var(--light);
-    }
-
-    .service-card {
-        height: 100%;
-        background: #fff;
-        padding: 35px;
-        border-radius: 16px;
-        border: 1px solid #e9eef1;
-        transition: .3s;
-    }
-
-    .service-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 45px rgba(7,43,64,.1);
-        border-color: transparent;
-    }
-
-    .service-icon {
-        width: 60px;
-        height: 60px;
-        background: rgba(22,160,133,.1);
-        color: var(--secondary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 14px;
-        font-size: 27px;
-        margin-bottom: 22px;
-    }
-
-    .service-card h4 {
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 12px;
-    }
-
-    .service-card p {
-        color: var(--text);
-        line-height: 1.7;
-        margin-bottom: 0;
-    }
-
-    /* DIFERENCIAIS */
-
-    .differentials {
-        background: var(--primary);
-        color: #fff;
-    }
-
-    .differentials .section-title {
-        color: #fff;
-    }
-
-    .differentials .section-description {
-        color: rgba(255,255,255,.7);
-    }
-
-    .feature {
-        display: flex;
-        gap: 18px;
-        margin-bottom: 30px;
-    }
-
-    .feature-icon {
-        min-width: 52px;
-        width: 52px;
-        height: 52px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 12px;
-        background: rgba(32,201,151,.15);
-        color: #4ee2b8;
-        font-size: 22px;
-    }
-
-    .feature h5 {
-        font-weight: 700;
-        margin-bottom: 8px;
-    }
-
-    .feature p {
-        color: rgba(255,255,255,.65);
-        line-height: 1.7;
-        margin: 0;
-    }
-
-    /* NÚMEROS */
-
-    .numbers {
-        background: #fff;
-    }
-
-    .number-box {
-        text-align: center;
-        padding: 30px 15px;
-    }
-
-    .number-box i {
-        color: var(--secondary);
-        font-size: 32px;
-        margin-bottom: 15px;
-    }
-
-    .number-box h3 {
-        font-size: 2.2rem;
-        font-weight: 800;
-        color: var(--primary);
-        margin-bottom: 5px;
-    }
-
-    .number-box p {
-        color: var(--text);
-        margin: 0;
-    }
-
-    /* CTA */
-
-    .cta {
-        padding: 80px 0;
-        background: linear-gradient(120deg, #0b3d5c, #117b72);
-    }
-
-    .cta h2 {
-        color: #fff;
-        font-weight: 800;
-        font-size: clamp(2rem, 4vw, 3rem);
-    }
-
-    .cta p {
-        color: rgba(255,255,255,.75);
-    }
-
-    /* CONTATO */
-
-    .contact {
-        background: var(--light);
-    }
-
-    .contact-card {
-        background: #fff;
-        padding: 35px;
-        border-radius: 18px;
-        height: 100%;
-        border: 1px solid #e8edef;
-    }
-
-    .contact-item {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 25px;
-    }
-
-    .contact-icon {
-        min-width: 48px;
-        width: 48px;
-        height: 48px;
-        background: rgba(22,160,133,.1);
-        color: var(--secondary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        font-size: 21px;
-    }
-
-    .contact-item h6 {
-        font-weight: 700;
-        margin-bottom: 5px;
-    }
-
-    .contact-item p,
-    .contact-item a {
-        color: var(--text);
-        text-decoration: none;
-        margin: 0;
-        line-height: 1.6;
-    }
-
-    .contact-item a:hover {
-        color: var(--secondary);
-    }
-
-    .map-container {
-        border-radius: 18px;
-        overflow: hidden;
-        height: 100%;
-        min-height: 420px;
-        box-shadow: 0 15px 40px rgba(0,0,0,.08);
-    }
-
-    .map-container iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-
-    /* FOOTER */
-
-    footer {
-        background: #061f2e;
-        color: rgba(255,255,255,.65);
-        padding: 60px 0 25px;
-    }
-
-    .footer-brand {
-        color: #fff;
-        font-size: 1.5rem;
-        font-weight: 800;
-        margin-bottom: 15px;
-    }
-
-    .footer-brand span {
-        color: var(--accent);
-    }
-
-    footer p {
-        line-height: 1.8;
-    }
-
-    .footer-title {
-        color: #fff;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
-
-    .footer-links {
-        list-style: none;
-        padding: 0;
-    }
-
-    .footer-links li {
-        margin-bottom: 10px;
-    }
-
-    .footer-links a {
-        color: rgba(255,255,255,.6);
-        text-decoration: none;
-        transition: .2s;
-    }
-
-    .footer-links a:hover {
-        color: #4ee2b8;
-    }
-
-    .footer-bottom {
-        border-top: 1px solid rgba(255,255,255,.1);
-        margin-top: 40px;
-        padding-top: 25px;
-        font-size: .9rem;
-    }
-
-    /* WHATSAPP */
-
-    .whatsapp-float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        right: 25px;
-        bottom: 25px;
-        background: #25d366;
-        color: #fff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 30px;
-        text-decoration: none;
-        z-index: 999;
-        box-shadow: 0 8px 25px rgba(37,211,102,.4);
-        transition: .3s;
-    }
-
-    .whatsapp-float:hover {
-        color: #fff;
-        transform: scale(1.1);
-    }
-
-    /* RESPONSIVO */
-
-    @media (max-width: 991px) {
         .hero {
-            min-height: auto;
-            padding: 140px 0 90px;
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    110deg,
+                    rgba(7,44,71,0.98),
+                    rgba(11,61,98,0.92),
+                    rgba(21,150,209,0.72)
+                );
+            color: #fff;
+            padding-top: 90px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            right: -200px;
+            top: -150px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(32,180,134,0.10);
+            left: -150px;
+            bottom: -100px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.18);
+            padding: 8px 15px;
+            border-radius: 30px;
+            margin-bottom: 22px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.4rem);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: #4be0ae;
+        }
+
+        .hero p {
+            color: rgba(255,255,255,0.82);
+            font-size: 1.12rem;
+            line-height: 1.8;
+            max-width: 680px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            border: none;
+            color: #fff;
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            background: #17956e;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light-custom {
+            border: 1px solid rgba(255,255,255,0.5);
+            color: #fff;
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: #fff;
+            color: var(--primary);
         }
 
         .hero-card {
-            margin-top: 40px;
+            position: relative;
+            z-index: 2;
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 30px 70px rgba(0,0,0,0.15);
         }
+
+        .hero-card-icon {
+            width: 65px;
+            height: 65px;
+            background: var(--accent);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 22px;
+        }
+
+        .hero-card h4 {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .hero-card p {
+            font-size: 14px;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
 
         section {
-            padding: 75px 0;
+            padding: 90px 0;
         }
 
-        .about-image {
-            min-height: 350px;
-            margin-bottom: 40px;
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
         }
-    }
 
-    @media (max-width: 576px) {
-        .hero h1 {
+        .section-title .eyebrow {
+            color: var(--secondary);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            color: var(--dark);
+            font-size: 2.3rem;
+            font-weight: 800;
             letter-spacing: -1px;
         }
 
-        .hero-card {
+        .section-title p {
+            max-width: 650px;
+            margin: 15px auto 0;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #fff;
+        }
+
+        .about-box {
             padding: 25px;
+            border-radius: 15px;
+            background: var(--light);
+            height: 100%;
         }
 
-        .about-image {
-            min-height: 300px;
-        }
-
-        .whatsapp-float {
+        .about-icon {
             width: 55px;
             height: 55px;
-            right: 18px;
-            bottom: 18px;
+            border-radius: 12px;
+            background: rgba(21,150,209,0.1);
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
-    }
-</style>
+
+        .about-box h4 {
+            color: var(--dark);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .about-box p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: var(--light);
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            border: 1px solid #e9eef2;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(11,61,98,0.10);
+            border-color: transparent;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(21,150,209,0.10);
+            color: var(--secondary);
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            color: var(--dark);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-box i {
+            font-size: 30px;
+            color: #4be0ae;
+            margin-bottom: 15px;
+        }
+
+        .stat-box h3 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .stat-box p {
+            color: rgba(255,255,255,0.7);
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* =========================
+           DIFFERENTIALS
+        ========================= */
+
+        .differentials {
+            background: #fff;
+        }
+
+        .check-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .check-icon {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            background: rgba(32,180,134,0.12);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .check-item h5 {
+            color: var(--dark);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .check-item p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .info-panel {
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--secondary)
+            );
+            border-radius: 20px;
+            padding: 40px;
+            color: #fff;
+            height: 100%;
+        }
+
+        .info-panel h3 {
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .info-panel p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+        }
+
+        .info-panel .mini-info {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 18px;
+            margin-top: 20px;
+        }
+
+        /* =========================
+           REGISTRATION
+        ========================= */
+
+        .registration {
+            background: var(--light);
+        }
+
+        .data-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #e7edf1;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 16px 20px;
+            border-bottom: 1px solid #edf0f2;
+        }
+
+        .data-row:last-child {
+            border-bottom: none;
+        }
+
+        .data-label {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .data-value {
+            text-align: right;
+            color: var(--text);
+        }
+
+        .status-active {
+            display: inline-block;
+            background: #e5f8f0;
+            color: #16825d;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           CNAE
+        ========================= */
+
+        .cnae-box {
+            background: #fff;
+            border: 1px solid #e7edf1;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .cnae-code {
+            display: inline-block;
+            background: rgba(21,150,209,0.1);
+            color: var(--secondary);
+            padding: 8px 14px;
+            border-radius: 7px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #fff;
+        }
+
+        .contact-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(21,150,209,0.1);
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h5 {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .contact-card a {
+            color: var(--secondary);
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .map-box {
+            border-radius: 20px;
+            overflow: hidden;
+            min-height: 380px;
+            background:
+                linear-gradient(
+                    rgba(7,44,71,0.82),
+                    rgba(7,44,71,0.82)
+                ),
+                url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80')
+                center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+            color: #fff;
+        }
+
+        .map-content i {
+            font-size: 55px;
+            color: #4be0ae;
+            margin-bottom: 15px;
+        }
+
+        .map-content h4 {
+            font-weight: 800;
+        }
+
+        .map-content p {
+            color: rgba(255,255,255,0.75);
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 70px 0;
+            background: linear-gradient(
+                110deg,
+                var(--primary-dark),
+                var(--primary),
+                var(--secondary)
+            );
+            color: #fff;
+        }
+
+        .cta h2 {
+            font-weight: 800;
+            font-size: 2.3rem;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.78);
+            max-width: 650px;
+            margin: 15px auto 25px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #061f32;
+            color: rgba(255,255,255,0.65);
+            padding: 50px 0 20px;
+        }
+
+        .footer-brand {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .footer-brand span {
+            color: var(--accent);
+        }
+
+        footer h6 {
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        .footer-line {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin-top: 35px;
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        /* =========================
+           WHATSAPP FLOAT
+        ========================= */
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            right: 25px;
+            bottom: 25px;
+            background: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.35);
+            z-index: 999;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            color: #fff;
+            background: #20bd5b;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .hero {
+                min-height: auto;
+                padding: 140px 0 80px;
+            }
+
+            .hero-card {
+                margin-top: 40px;
+            }
+
+            .navbar .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            section {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .data-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .data-value {
+                text-align: left;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                right: 18px;
+                bottom: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            HG <span>Consultoria</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#diferenciais">Diferenciais</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a
+                        class="nav-link btn-navbar"
+                        href="https://wa.me/5596984120646"
+                        target="_blank"
+                    >
+                        <i class="bi bi-whatsapp me-1"></i>
+                        Fale Conosco
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-7 hero-content">
+
+                <div class="hero-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    Consultoria Contábil e Empresarial
+                </div>
+
+                <h1>
+                    Contabilidade que
+                    <span>impulsiona</span>
+                    o seu negócio.
+                </h1>
+
+                <p class="mt-4">
+                    Soluções contábeis e empresariais para ajudar sua empresa
+                    a crescer com organização, segurança, planejamento e
+                    decisões mais inteligentes.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="https://wa.me/5596984120646"
+                        target="_blank"
+                        class="btn btn-main"
+                    >
+                        <i class="bi bi-whatsapp me-2"></i>
+                        Fale com um especialista
+                    </a>
+
+                    <a
+                        href="#servicos"
+                        class="btn btn-outline-light-custom"
+                    >
+                        Conheça nossos serviços
+                        <i class="bi bi-arrow-down ms-2"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="hero-card">
+
+                    <div class="hero-card-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+
+                    <h4>
+                        Seu negócio em boas mãos.
+                    </h4>
+
+                    <p>
+                        A HG Consultoria Empresarial oferece atendimento
+                        profissional e soluções personalizadas para empresas
+                        que buscam mais organização e eficiência.
+                    </p>
+
+                    <div class="row mt-4">
+
+                        <div class="col-6">
+                            <strong class="d-block fs-4">
+                                2023
+                            </strong>
+                            <small>
+                                Fundação
+                            </small>
+                        </div>
+
+                        <div class="col-6">
+                            <strong class="d-block fs-4">
+                                Ativa
+                            </strong>
+                            <small>
+                                Situação cadastral
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section class="about" id="empresa">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Quem somos
+            </div>
+
+            <h2>
+                Parceiros para o crescimento da sua empresa
+            </h2>
+
+            <p>
+                A HG Consultoria Contábil e Empresarial LTDA atua oferecendo
+                soluções contábeis e suporte empresarial para ajudar
+                empreendedores a administrar seus negócios com mais
+                tranquilidade e segurança.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="about-box">
+
+                    <div class="about-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>
+                        Segurança
+                    </h4>
+
+                    <p>
+                        Informações e processos contábeis organizados para
+                        proporcionar maior segurança na gestão empresarial.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="about-box">
+
+                    <div class="about-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>
+                        Estratégia
+                    </h4>
+
+                    <p>
+                        Dados contábeis que ajudam empresários a compreender
+                        melhor seus negócios e tomar decisões mais conscientes.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="about-box">
+
+                    <div class="about-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h4>
+                        Atendimento próximo
+                    </h4>
+
+                    <p>
+                        Buscamos compreender a realidade de cada cliente para
+                        oferecer soluções adequadas às suas necessidades.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
+
+<section class="services" id="servicos">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Nossos serviços
+            </div>
+
+            <h2>
+                Soluções para sua empresa
+            </h2>
+
+            <p>
+                Conte com suporte contábil e empresarial para organizar sua
+                empresa e construir uma gestão mais eficiente.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>
+                        Contabilidade
+                    </h4>
+
+                    <p>
+                        Escrituração e acompanhamento contábil para manter
+                        as informações financeiras e patrimoniais da empresa
+                        organizadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h4>
+                        Obrigações fiscais
+                    </h4>
+
+                    <p>
+                        Apoio no acompanhamento das obrigações fiscais e
+                        tributárias necessárias ao funcionamento regular
+                        da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-cash-coin"></i>
+                    </div>
+
+                    <h4>
+                        Gestão financeira
+                    </h4>
+
+                    <p>
+                        Orientação para melhorar a organização financeira,
+                        acompanhar resultados e entender melhor os números
+                        do negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h4>
+                        Consultoria empresarial
+                    </h4>
+
+                    <p>
+                        Orientação para empresários que desejam melhorar
+                        processos, organização e planejamento de suas empresas.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+
+                    <h4>
+                        Planejamento empresarial
+                    </h4>
+
+                    <p>
+                        Apoio na organização das informações necessárias para
+                        estabelecer objetivos e acompanhar o desempenho
+                        empresarial.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+
+                    <h4>
+                        Orientação para negócios
+                    </h4>
+
+                    <p>
+                        Atendimento personalizado para esclarecer dúvidas
+                        e auxiliar empresários em decisões relacionadas
+                        à gestão do negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NÚMEROS
+========================= -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <i class="bi bi-calendar-check"></i>
+
+                    <h3>
+                        2023
+                    </h3>
+
+                    <p>
+                        Ano de fundação
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <i class="bi bi-award"></i>
+
+                    <h3>
+                        AP
+                    </h3>
+
+                    <p>
+                        CRC AP-000168/O
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <i class="bi bi-currency-dollar"></i>
+
+                    <h3>
+                        R$ 50 mil
+                    </h3>
+
+                    <p>
+                        Capital social
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    <h3>
+                        Ativa
+                    </h3>
+
+                    <p>
+                        Situação cadastral
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DIFERENCIAIS
+========================= -->
+
+<section class="differentials" id="diferenciais">
+
+    <div class="container">
+
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-6">
+
+                <div class="section-title text-start mb-4">
+
+                    <div class="eyebrow">
+                        Por que escolher a HG?
+                    </div>
+
+                    <h2>
+                        Mais do que números, ajudamos você a tomar decisões.
+                    </h2>
+
+                    <p class="mx-0">
+                        Uma boa contabilidade deve ser uma ferramenta de apoio
+                        para o empresário. Por isso, buscamos transformar
+                        informações contábeis em conhecimento útil para
+                        a gestão.
+                    </p>
+
+                </div>
+
+                <div class="check-item">
+
+                    <div class="check-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
+
+                    <div>
+                        <h5>
+                            Atendimento personalizado
+                        </h5>
+
+                        <p>
+                            Cada empresa possui uma realidade diferente.
+                            Nosso atendimento busca respeitar as necessidades
+                            específicas de cada negócio.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="check-item">
+
+                    <div class="check-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
+
+                    <div>
+                        <h5>
+                            Organização e transparência
+                        </h5>
+
+                        <p>
+                            Informações organizadas facilitam a compreensão
+                            da situação da empresa e contribuem para uma
+                            gestão mais segura.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="check-item">
+
+                    <div class="check-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
+
+                    <div>
+                        <h5>
+                            Foco no empreendedor
+                        </h5>
+
+                        <p>
+                            Nosso objetivo é simplificar assuntos contábeis
+                            e empresariais para que você possa se concentrar
+                            no crescimento do seu negócio.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="info-panel">
+
+                    <h3>
+                        Uma empresa preparada para atender você.
+                    </h3>
+
+                    <p>
+                        A HG Consultoria Empresarial é uma Microempresa,
+                        constituída como Sociedade Empresária Limitada,
+                        com sede em Macapá, no estado do Amapá.
+                    </p>
+
+                    <div class="mini-info">
+
+                        <div class="row">
+
+                            <div class="col-6">
+                                <small class="d-block opacity-75">
+                                    Razão Social
+                                </small>
+
+                                <strong>
+                                    HG Consultoria Contábil e Empresarial LTDA
+                                </strong>
+                            </div>
+
+                            <div class="col-6">
+                                <small class="d-block opacity-75">
+                                    Nome Fantasia
+                                </small>
+
+                                <strong>
+                                    HG Consultoria Empresarial
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mini-info">
+
+                        <div class="row">
+
+                            <div class="col-6">
+                                <small class="d-block opacity-75">
+                                    Regime tributário
+                                </small>
+
+                                <strong>
+                                    Simples Nacional
+                                </strong>
+                            </div>
+
+                            <div class="col-6">
+                                <small class="d-block opacity-75">
+                                    Tipo
+                                </small>
+
+                                <strong>
+                                    Matriz
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DADOS CADASTRAIS
+========================= -->
+
+<section class="registration">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Informações empresariais
+            </div>
+
+            <h2>
+                Dados cadastrais
+            </h2>
+
+            <p>
+                Informações de identificação e registro da HG Consultoria
+                Contábil e Empresarial LTDA.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <div class="data-row">
+                        <span class="data-label">CNPJ</span>
+                        <span class="data-value">49.212.276/0001-22</span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Razão Social</span>
+                        <span class="data-value">
+                            HG Consultoria Contábil e Empresarial LTDA
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Nome Fantasia</span>
+                        <span class="data-value">
+                            HG Consultoria Empresarial
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">CRC</span>
+                        <span class="data-value">
+                            AP-000168/O
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Data de abertura</span>
+                        <span class="data-value">
+                            17/01/2023
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Porte</span>
+                        <span class="data-value">
+                            Micro Empresa
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Natureza Jurídica</span>
+                        <span class="data-value">
+                            Sociedade Empresária Limitada
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <div class="data-row">
+                        <span class="data-label">Capital Social</span>
+                        <span class="data-value">
+                            R$ 50.000,00
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Tipo</span>
+                        <span class="data-value">
+                            Matriz
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Situação</span>
+                        <span class="data-value">
+                            <span class="status-active">
+                                <i class="bi bi-check-circle me-1"></i>
+                                ATIVA
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">MEI</span>
+                        <span class="data-value">
+                            Não
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Simples Nacional</span>
+                        <span class="data-value">
+                            Sim
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Opção pelo Simples</span>
+                        <span class="data-value">
+                            01/01/2026
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Situação cadastral</span>
+                        <span class="data-value">
+                            Desde 17/01/2023
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CNAE -->
+
+        <div class="row mt-4">
+
+            <div class="col-12">
+
+                <div class="cnae-box">
+
+                    <span class="cnae-code">
+                        CNAE PRINCIPAL
+                    </span>
+
+                    <h4 class="text-dark fw-bold">
+                        69.20-6-01
+                    </h4>
+
+                    <p class="mb-0">
+                        Atividades de contabilidade
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+
+<section class="contact" id="contato">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Entre em contato
+            </div>
+
+            <h2>
+                Vamos conversar sobre sua empresa?
+            </h2>
+
+            <p>
+                Entre em contato com a HG Consultoria Empresarial e descubra
+                como podemos ajudar sua empresa.
+            </p>
+
+        </div>
+
+        <div class="row g-4 mb-5">
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-whatsapp"></i>
+                    </div>
+
+                    <h5>
+                        WhatsApp
+                    </h5>
+
+                    <p class="mb-2">
+                        Fale conosco pelo WhatsApp.
+                    </p>
+
+                    <a
+                        href="https://wa.me/5596984120646"
+                        target="_blank"
+                    >
+                        (96) 98412-0646
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+
+                    <h5>
+                        E-mail
+                    </h5>
+
+                    <p class="mb-2">
+                        Envie sua mensagem.
+                    </p>
+
+                    <a href="mailto:hgcontabil.ap@hotmail.com">
+                        hgcontabil.ap@hotmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <h5>
+                        Endereço
+                    </h5>
+
+                    <p class="mb-0">
+                        Avenida Pedro Lazarino, 2088<br>
+                        Letra A - Buritizal<br>
+                        Macapá - AP<br>
+                        CEP 68902-862
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="map-box">
+
+                    <div class="map-content">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <h4>
+                            Estamos em Macapá - Amapá
+                        </h4>
+
+                        <p>
+                            Avenida Pedro Lazarino, 2088 — Letra A<br>
+                            Bairro Buritizal — Macapá/AP
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Avenida+Pedro+Lazarino+2088+Macapa+AP+68902-862"
+                            target="_blank"
+                            class="btn btn-main mt-2"
+                        >
+                            <i class="bi bi-map me-2"></i>
+                            Abrir no Google Maps
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta text-center">
+
+    <div class="container">
+
+        <h2>
+            Pronto para cuidar melhor da sua empresa?
+        </h2>
+
+        <p>
+            Conte com a HG Consultoria Empresarial para apoiar sua empresa
+            com soluções contábeis e empresariais.
+        </p>
+
+        <a
+            href="https://wa.me/5596984120646"
+            target="_blank"
+            class="btn btn-main"
+        >
+            <i class="bi bi-whatsapp me-2"></i>
+            Falar pelo WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+                    HG <span>Consultoria Empresarial</span>
+                </div>
+
+                <p class="mt-3">
+                    HG Consultoria Contábil e Empresarial LTDA.
+                    Soluções contábeis e empresariais para apoiar
+                    empreendedores e empresas.
+                </p>
+
+            </div>
+
+
+            <div class="col-sm-6 col-lg-3">
+
+                <h6>
+                    Navegação
+                </h6>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="#inicio">Início</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#empresa">Empresa</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#servicos">Serviços</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#diferenciais">Diferenciais</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-sm-6 col-lg-4">
+
+                <h6>
+                    Contato
+                </h6>
+
+                <p class="mb-2">
+                    <i class="bi bi-whatsapp me-2"></i>
+                    <a href="https://wa.me/5596984120646">
+                        (96) 98412-0646
+                    </a>
+                </p>
+
+                <p class="mb-2">
+                    <i class="bi bi-envelope me-2"></i>
+                    <a href="mailto:hgcontabil.ap@hotmail.com">
+                        hgcontabil.ap@hotmail.com
+                    </a>
+                </p>
+
+                <p class="mb-0">
+                    <i class="bi bi-geo-alt me-2"></i>
+                    Macapá - Amapá
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-line text-center">
+
+            <p class="mb-1">
+                © <span id="ano"></span>
+                HG Consultoria Contábil e Empresarial LTDA.
+                Todos os direitos reservados.
+            </p>
+
+            <small>
+                CNPJ: 49.212.276/0001-22 |
+                CRC: AP-000168/O
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+
+<a
+    href="https://wa.me/5596984120646"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="Falar com a HG Consultoria pelo WhatsApp"
+>
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+
+<!-- Bootstrap JS -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Ano automático -->
+<script>
+    document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
